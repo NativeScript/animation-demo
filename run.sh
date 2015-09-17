@@ -6,7 +6,7 @@ if [[ ! -d "./animation-demo" && "${gitresult}" != "" ]]; then
     echo "=> Downloading animation-demo from git"
     printf "\r=> "
     command git clone "git@github.com:NativeScript/animation-demo.git"
-    cd sample-Tasks
+    cd animation-demo
 fi
 
 set -e
