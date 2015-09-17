@@ -22,12 +22,14 @@ unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]]; then
     iosresult=$(tns platform list | grep 'Installed platforms.*ios');
     if [[ "$iosresult" == "" ]]; then
+        echo "=> Adding platform ios"
         tns platform add ios
     fi
     tns run ios --emulator
 else
     androidresult=$(tns platform list | grep 'Installed platforms.*android');
     if [[ "$androidresult" == "" ]]; then
+        echo "=> Adding platform android"
         tns platform add android
     fi
     tns run android --emulator
