@@ -17,8 +17,7 @@ fi
 
 tns install
 node_modules/typescript/bin/tsc -p ./app
-cp ./manifests/AndroidManifest.xml ./platforms/android/src/main
-
+# 
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]]; then
     tns run ios --emulator
