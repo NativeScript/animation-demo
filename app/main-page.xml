@@ -2,7 +2,9 @@
   <ScrollView>
     <StackLayout>
       <Button text="opacity" tap="onButtonTap"/>
-      <Button text="background-color" tap="onButtonTap"/>
+      <android>
+          <Button text="background-color" tap="onButtonTap"/>
+      </android>
       <Button text="translate" tap="onButtonTap"/>
       <Button text="scale" tap="onButtonTap"/>
       <Button text="rotate" tap="onButtonTap"/>
@@ -10,8 +12,10 @@
       <Button text="chaining-with-promises" tap="onButtonTap"/>
       <Button text="chaining-with-animation-set" tap="onButtonTap"/>
       <Button text="multiple-views" tap="onButtonTap"/>
-      <Button text="infinite" tap="onButtonTap"/>
       <Button text="slide-in-effect" tap="onButtonTap"/>
+      <android>
+          <Button text="infinite" tap="onButtonTap"/>
+      </android>
     </StackLayout>
   </ScrollView>
 </Page>
