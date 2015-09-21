@@ -1,10 +1,10 @@
 {
 	"name": "tns-definitions",
 	"description": "NativeScript Module definitions",
-	"version": "1.3.0",
+	"version": "1.4.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/NativeScript/NativeScript/commit/f5fefaf11bc16057b5a6047bc98a2a17af17138c"
+		"url": "https://github.com/NativeScript/NativeScript/commit/d517c68a0e00ece284380916e4531771f900cd68"
 	},
 	"files": [
 		"**/*.*",
@@ -19,12 +19,12 @@
 		"grunt-exec": "0.4.6",
 		"grunt-multi-dest": "1.0.0",
 		"grunt-shell": "1.1.2",
-		"grunt-ts": "4.2.0",
-		"grunt-tslint": "2.4.0",
+		"grunt-ts": "5.0.0-beta.5",
+		"grunt-tslint": "2.5.0",
 		"mocha": "2.2.5",
 		"grunt-simple-mocha": "0.4.0",
 		"grunt-env": "0.4.4",
 		"chai": "3.2.0",
-		"typescript": "1.5.3"
+		"typescript": "1.6.2"
 	}
 }

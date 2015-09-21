@@ -19,7 +19,7 @@ export function onAnimate(args: observable.EventData) {
         iterations: Number.POSITIVE_INFINITY,
         curve: view.ios ? UIViewAnimationCurve.UIViewAnimationCurveLinear : new android.view.animation.LinearInterpolator
     }]);
-    animationSet.play().finished.catch((e) => {
+    animationSet.play().catch((e) => {
         console.log("Animation stoppped!");
     });
     // Call animationSet.cancel() to stop it;

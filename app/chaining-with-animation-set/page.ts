@@ -25,7 +25,7 @@ export function onAnimate(args: observable.EventData) {
   var playSequentially = true;
   var animationSet = new animationModule.Animation(definitions, playSequentially);
 
-  animationSet.play().finished.then(() => {
+  animationSet.play().then(() => {
       console.log("Animation finished");
   })
   .catch((e) => {

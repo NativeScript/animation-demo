@@ -14,10 +14,9 @@ function onAnimate(args) {
             iterations: Number.POSITIVE_INFINITY,
             curve: view.ios ? UIViewAnimationCurve.UIViewAnimationCurveLinear : new android.view.animation.LinearInterpolator
         }]);
-    animationSet.play().finished.catch(function (e) {
+    animationSet.play().catch(function (e) {
         console.log("Animation stoppped!");
     });
-    // Call animationSet.cancel() to stop it;
 }
 exports.onAnimate = onAnimate;
 function onReset(args) {
