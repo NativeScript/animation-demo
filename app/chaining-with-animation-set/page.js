@@ -19,7 +19,7 @@ function onAnimate(args) {
     definitions.push({ target: view4, translate: { x: 0, y: -200 }, duration: 3000 });
     var playSequentially = true;
     var animationSet = new animationModule.Animation(definitions, playSequentially);
-    animationSet.play().finished.then(function () {
+    animationSet.play().then(function () {
         console.log("Animation finished");
     })
         .catch(function (e) {

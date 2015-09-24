@@ -30,6 +30,8 @@ declare module "ui/core/view" {
      */
     export function getAncestor(view: View, criterion: string | Function): View;
 
+    export function isEventOrGesture(name: string, view: View): boolean;
+
     /**
      * Defines interface for an optional parameter used to create a view.
      */
@@ -82,9 +84,14 @@ declare module "ui/core/view" {
          */
         visibility?: string;
         /**
-         * Gets or sets the CSS class of this view.
+         * [Deprecated. Please use className instead] Gets or sets the CSS class of this view.
          */
         cssClass?: string;
+
+        /**
+         * Gets or sets the CSS class name of this view.
+         */
+        className?: string;
         /**
          * Gets or sets the id of this view.
          */
@@ -127,9 +134,14 @@ declare module "ui/core/view" {
         public static idProperty: dependencyObservable.Property;
 
         /**
-         * Represents the observable property backing the cssClass property of each View.
+         * [Deprecated. Please use className instead.] Represents the observable property backing the cssClass property of each View.
          */
         public static cssClassProperty: dependencyObservable.Property;
+
+        /**
+         * Represents the observable property backing the className property of each View.
+         */
+        public static classNameProperty: dependencyObservable.Property;
 
         /**
          * Represents the observable property backing the isEnabled property of each View.
@@ -268,9 +280,14 @@ declare module "ui/core/view" {
         id: string;
 
         /**
-         * Gets or sets the CSS class for this view.
+         * [Deprecated. Please use className instead.] Gets or sets the CSS class for this view.
          */
         cssClass: string;
+
+        /**
+         * Gets or sets the CSS class name for this view.
+         */
+        className: string;
 
         /**
          * Gets the style object associated to this view.
