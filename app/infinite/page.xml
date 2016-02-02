@@ -1,4 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+      <ActionBar title="Infinite"/>
+  </Page.actionBar>
   <StackLayout>
     <Button text="Animate" tap="onAnimate"/>
     <Button text="Reset" tap="onReset"/>

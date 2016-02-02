@@ -6,7 +6,7 @@ function pageLoaded(args) {
 exports.pageLoaded = pageLoaded;
 function onAnimate(args) {
     view.animate({
-        rotate: 180,
+        rotate: 360,
         duration: 3000
     });
 }

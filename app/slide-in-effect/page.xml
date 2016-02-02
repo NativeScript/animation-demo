@@ -1,4 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+      <ActionBar title="Slide in Effect"/>
+  </Page.actionBar>
   <StackLayout>
     <Button text="Add Item" tap="onAddItem"/>
     <Button text="Clear" tap="onClear"/>

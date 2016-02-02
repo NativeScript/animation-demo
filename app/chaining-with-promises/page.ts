@@ -17,8 +17,8 @@ export function onAnimate(args: observable.EventData) {
       .then(() => view.animate({ translate: { x: 0, y: 0 } }))
       .then(() => view.animate({ scale: { x: 3, y: 3 } }))
       .then(() => view.animate({ scale: { x: 1, y: 1 } }))
-      .then(() => view.animate({ rotate: 180 }))
-      .then(() => view.animate({ rotate: 0 }))
+      .then(() => view.animate({ rotate: 180 } ))
+      .then(() => view.animate({ rotate: 0 } ))
       .then(() => {
       console.log("Animation finished");
     })
