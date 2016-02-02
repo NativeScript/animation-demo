@@ -1,4 +1,7 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+      <ActionBar title="Rotate"/>
+  </Page.actionBar>
   <StackLayout>
     <Button text="Animate" tap="onAnimate"/>
     <Button text="Reset" tap="onReset"/>

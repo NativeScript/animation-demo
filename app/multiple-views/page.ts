@@ -48,7 +48,7 @@ export function onAnimate(args: observable.EventData) {
 
   var animationSet = new animationModule.Animation(definitions);
 
-  animationSet.play().finished.then(() => {
+  animationSet.play().then(() => {
       console.log("Animation finished");
   })
   .catch((e) => {

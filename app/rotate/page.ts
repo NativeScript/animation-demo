@@ -12,7 +12,7 @@ export function pageLoaded(args: observable.EventData) {
 
 export function onAnimate(args: observable.EventData) {
     view.animate({
-        rotate: 180,
+        rotate: 360,
         duration: 3000
     });
 }
