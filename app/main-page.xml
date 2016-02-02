@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
   <Page.actionBar>
       <ActionBar title="Animations"/>
   </Page.actionBar>
@@ -13,6 +13,7 @@
       <Button text="chaining-with-promises" tap="onButtonTap"/>
       <Button text="chaining-with-animation-set" tap="onButtonTap"/>
       <Button text="multiple-views" tap="onButtonTap"/>
+      <Button text="reusing" tap="onButtonTap"/>
       <Button text="slide-in-effect" tap="onButtonTap"/>
       <Button text="infinite" tap="onButtonTap"/>
     </StackLayout>

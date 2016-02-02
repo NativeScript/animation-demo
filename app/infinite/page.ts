@@ -19,9 +19,9 @@ export function onAnimate(args: observable.EventData) {
         iterations: Number.POSITIVE_INFINITY,
         curve: view.ios ? CAMediaTimingFunction.functionWithName(kCAMediaTimingFunctionLinear) : new android.view.animation.LinearInterpolator
     }]);
-    animationSet.play()
-        .then(() => { console.log("Animation finished!"); })
-        .catch((e) => { return console.log(e.message); });
+    animationSet.play().catch((e) => {
+        console.log("Animation stoppped!");
+    });
     // Call animationSet.cancel() to stop it;
 }
 

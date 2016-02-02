@@ -14,10 +14,9 @@ function onAnimate(args) {
             iterations: Number.POSITIVE_INFINITY,
             curve: view.ios ? CAMediaTimingFunction.functionWithName(kCAMediaTimingFunctionLinear) : new android.view.animation.LinearInterpolator
         }]);
-    animationSet.play()
-        .then(function () { console.log("Animation finished!"); })
-        .catch(function (e) { return console.log(e.message); });
-    // Call animationSet.cancel() to stop it;
+    animationSet.play().catch(function (e) {
+        console.log("Animation stoppped!");
+    });
 }
 exports.onAnimate = onAnimate;
 function onReset(args) {

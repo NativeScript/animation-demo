@@ -1,8 +1,9 @@
 declare module "utils/utils" {
     import colorModule = require("color");
-    import view = require("ui/core/view");
 
     export var RESOURCE_PREFIX: string;
+
+    
 
     /**
      * Utility module related to layout.
@@ -130,11 +131,6 @@ declare module "utils/utils" {
          */
         export function getColor(uiColor: UIColor): colorModule.Color;
         /**
-         * Gets actual height of a [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) widget.
-         * @param uiView - An instance of UIView.
-         */
-        export function getActualHeight(uiView: UIView): number;
-        /**
          * Gets an information about if current mode is Landscape.
          */
         export function isLandscape(): boolean;
@@ -142,8 +138,6 @@ declare module "utils/utils" {
          * Gets the iOS device major version (for 8.1 will return 8).
          */
         export var MajorVersion: number;
-
-        export function _layoutRootView(rootView: view.View, parentBounds: CGRect): void;
     }
     /**
      * An utility function that copies properties from source object to target object.
