@@ -17,6 +17,7 @@ function onAnimate(args) {
     animationSet.play().catch(function (e) {
         console.log("Animation stoppped!");
     });
+    // Call animationSet.cancel() to stop it;
 }
 exports.onAnimate = onAnimate;
 function onReset(args) {
