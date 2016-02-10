@@ -1,5 +1,4 @@
 "use strict";
-var animationModule = require("ui/animation");
 var enums = require("ui/enums");
 var view;
 function pageLoaded(args) {
@@ -51,7 +50,7 @@ function onAnimateCustom(args) {
     view.animate({
         translate: { x: 0, y: 100 },
         duration: 1000,
-        curve: new animationModule.CustomAnimationCurve(0.1, 0.1, 0.1, 1)
+        curve: enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
 }
 exports.onAnimateCustom = onAnimateCustom;

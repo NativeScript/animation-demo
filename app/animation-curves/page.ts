@@ -1,7 +1,6 @@
 import observable = require("data/observable");
 import pages = require("ui/page");
 import viewModule = require("ui/core/view");
-import animationModule = require("ui/animation");
 import enums = require("ui/enums");
 
 var view: viewModule.View;
@@ -51,7 +50,7 @@ export function onAnimateCustom(args: observable.EventData) {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: new animationModule.CustomAnimationCurve(0.1, 0.1, 0.1, 1)
+        curve: enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
 }
 
