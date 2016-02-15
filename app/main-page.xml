@@ -16,6 +16,7 @@
       <Button text="reusing" tap="onButtonTap"/>
       <Button text="slide-in-effect" tap="onButtonTap"/>
       <Button text="infinite" tap="onButtonTap"/>
+      <Button text="animation-curves" tap="onButtonTap"/>
     </StackLayout>
   </ScrollView>
 </Page>
