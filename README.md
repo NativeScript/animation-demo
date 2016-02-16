@@ -13,7 +13,7 @@ Use this application to find-out how to implement common animation scenarios wit
 
 3. Compile the TypeScript code
 
-       `node_modules/typescript/bin/tsc -p ./app`
+       `node_modules/typescript/bin/tsc -p .`
 
 4. Run the project.
 

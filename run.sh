@@ -16,7 +16,7 @@ if [[ "$npmresult" == "" ]]; then
 fi
 
 tns install
-node_modules/typescript/bin/tsc -p ./app
+node_modules/typescript/bin/tsc -p .
 # 
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]]; then
