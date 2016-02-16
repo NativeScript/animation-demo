@@ -1,4 +1,3 @@
-"use strict";
 var enums = require("ui/enums");
 var view;
 function pageLoaded(args) {
@@ -59,3 +58,4 @@ function onReset(args) {
     view.translateY = 0;
 }
 exports.onReset = onReset;
+//# sourceMappingURL=page.js.map

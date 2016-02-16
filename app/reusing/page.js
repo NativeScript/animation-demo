@@ -25,3 +25,4 @@ function onReset(args) {
     view.opacity = 1;
 }
 exports.onReset = onReset;
+//# sourceMappingURL=page.js.map

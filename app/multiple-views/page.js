@@ -57,3 +57,4 @@ function onReset(args) {
     view4.translateY = 0;
 }
 exports.onReset = onReset;
+//# sourceMappingURL=page.js.map

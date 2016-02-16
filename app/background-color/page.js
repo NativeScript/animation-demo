@@ -16,3 +16,4 @@ function onReset(args) {
     view.backgroundColor = new color.Color("White");
 }
 exports.onReset = onReset;
+//# sourceMappingURL=page.js.map

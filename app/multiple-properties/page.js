@@ -23,3 +23,4 @@ function onReset(args) {
     view.rotate = 0;
 }
 exports.onReset = onReset;
+//# sourceMappingURL=page.js.map

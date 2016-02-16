@@ -16,3 +16,4 @@ function onReset(args) {
     view.scaleY = 1;
 }
 exports.onReset = onReset;
+//# sourceMappingURL=page.js.map
