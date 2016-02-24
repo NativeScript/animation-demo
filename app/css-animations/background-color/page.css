@@ -1,0 +1,13 @@
+.button {
+    background-color: white;
+}
+
+.button_pressed {
+    animation-name: press;
+    animation-duration: 1s;
+}
+
+@keyframes press {
+    from { background-color: red; }
+    to { background-color: white; }
+}

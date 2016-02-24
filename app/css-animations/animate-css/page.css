@@ -1,0 +1,6 @@
+@import 'animate.css'
+
+.rubberBand {
+    animation-name: rubberBand;
+    animation-duration: 2s;
+}

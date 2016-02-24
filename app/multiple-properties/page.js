@@ -1,3 +1,4 @@
+"use strict";
 var color = require("color");
 var view;
 function pageLoaded(args) {

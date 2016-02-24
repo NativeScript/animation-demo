@@ -1,0 +1,20 @@
+.original {
+    transform: rotate(0) translateY(0);
+}
+
+.transformed {
+    animation-name: transformed;
+    animation-duration: 2s;
+}
+
+@keyframes transformed {
+    20% {
+        transform: scale(0.5, 0.5);
+    }
+    50% { 
+        transform: scale(1.5, 1.5) translateY(-100);
+    }
+    100% {
+        transform: scale(1.0, 1.0) rotate(360);         
+    }
+}

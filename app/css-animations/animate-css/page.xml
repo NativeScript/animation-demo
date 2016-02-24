@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+      <ActionBar title="Background Color"/>
+  </Page.actionBar>
+  <Button id="view" width="100" height="100" horisontal-alignment="center" vertical-alignment="center" text="Touch me" tap="onTap" backgroundColor="LightGray"/>
+</Page>

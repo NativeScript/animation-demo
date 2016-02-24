@@ -1,3 +1,4 @@
+"use strict";
 var enums = require("ui/enums");
 var view;
 function pageLoaded(args) {
