@@ -6,11 +6,8 @@ function pageLoaded(args) {
 }
 exports.pageLoaded = pageLoaded;
 function onAnimate(args) {
+    view.className = "";
     view.className = "bounce";
 }
 exports.onAnimate = onAnimate;
-function onReset(args) {
-    view.className = "";
-}
-exports.onReset = onReset;
 //# sourceMappingURL=page.js.map
