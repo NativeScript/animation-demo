@@ -5,6 +5,7 @@
 .transparent {
     animation-name: transparent;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes transparent {

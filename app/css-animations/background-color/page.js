@@ -6,8 +6,12 @@ function pageLoaded(args) {
 }
 exports.pageLoaded = pageLoaded;
 function onTap(args) {
-    view.className = "button";
-    view.className = "button_pressed";
+    if (view.className === "button") {
+        view.className = "button_selected";
+    }
+    else {
+        view.className = "button";
+    }
 }
 exports.onTap = onTap;
 //# sourceMappingURL=page.js.map

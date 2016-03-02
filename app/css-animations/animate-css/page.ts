@@ -3,15 +3,14 @@ import pages = require("ui/page");
 import viewModule = require("ui/core/view");
 import animationModule = require("ui/animation");
 
-var view: viewModule.View;
+let view: viewModule.View;
 
 export function pageLoaded(args: observable.EventData) {
-    var page = <pages.Page>args.object;
-  //  page.addCssFile("~/css-animations/animate-css/animate.css");
+    let page = <pages.Page>args.object;
     view = page.getViewById<viewModule.View>("view");
 }
 
-export function onTap(args: observable.EventData) {
+export function onAnimate(args: observable.EventData) {
     view.className = "";
     view.className = "rubberBand";
 }

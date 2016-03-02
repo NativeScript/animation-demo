@@ -8,16 +8,10 @@
       <Button text="opacity" tap="onButtonTap"/>
       <Button text="transform" tap="onButtonTap"/>
       <Button text="bounce" tap="onButtonTap"/>
-      <Button text="visual-states" tap="onButtonTap"/>
       <Button text="animate-css" tap="onButtonTap"/>
-      <!--
-      <Button text="transform-origin" tap="onButtonTap"/>
-      <Button text="repeat-count" tap="onButtonTap"/>
-      <Button text="fill-mode" tap="onButtonTap"/>
-      <Button text="transition" tap="onButtonTap"/>
-      <Button text="skew" tap="onButtonTap"/>
-      <Button text="perspective" tap="onButtonTap"/>
-      -->
+      <Button text="from-code" tap="onButtonTap"/>
+      <Button text="settings" tap="onButtonTap"/>
+      <Button text="visual-states" tap="onButtonTap"/> 
     </StackLayout>
   </ScrollView>
 </Page>

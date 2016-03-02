@@ -27,7 +27,7 @@
 	"nativescript": {
 		"id": "org.nativescript.animationdemo",
 		"tns-android": {
-			"version": "1.6.0"
+			"version": "1.6.2"
 		},
 		"tns-ios": {
 			"version": "1.6.0"

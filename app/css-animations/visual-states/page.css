@@ -5,6 +5,7 @@
 .button:highlighted {
     animation-name: highlight;
     animation-duration: 1s;
+    animation-duration: forwards;
 }
 
 @keyframes highlight {
