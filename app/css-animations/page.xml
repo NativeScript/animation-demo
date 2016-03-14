@@ -11,7 +11,8 @@
       <Button text="animate-css" tap="onButtonTap"/>
       <Button text="from-code" tap="onButtonTap"/>
       <Button text="settings" tap="onButtonTap"/>
-      <Button text="visual-states" tap="onButtonTap"/> 
+      <Button text="visual-states" tap="onButtonTap"/>
+      <Button text="test" tap="onButtonTap"/> 
     </StackLayout>
   </ScrollView>
 </Page>

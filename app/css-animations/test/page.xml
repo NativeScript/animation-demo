@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+      <ActionBar title="Test"/>
+  </Page.actionBar>
+  <StackLayout>
+    <Button text="Animate" tap="onAnimate"/>
+    <AbsoluteLayout width="300" height="300" clipToBounds="true" class="panel">
+        <Label left="150" top="20" width="50" height="50" class="item1"/>
+        <Label left="100" top="100" width="200" height="200" class="item2"/>
+        <Label left="80" top="130" width="240" height="145" class="item3"/>
+    </AbsoluteLayout>
+  </StackLayout>
+</Page>
