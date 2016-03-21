@@ -1,14 +1,16 @@
 "use strict";
+var keyframeAnimation = require("ui/animation/keyframe-animation");
 var view;
-var animation;
+var animationInfo;
 function pageLoaded(args) {
     var page = args.object;
     view = page.getViewById("view");
-    animation = page.getKeyframesAnimation("bounce");
-    animation.duration = 2000;
+    animationInfo = page.getKeyframeAnimationWithName("bounce");
+    animationInfo.duration = 2000;
 }
 exports.pageLoaded = pageLoaded;
 function onAnimate(args) {
+    var animation = keyframeAnimation.KeyframeAnimation.keyframeAnimationFromInfo(animationInfo);
     animation.play(view).then(function () {
         console.log("Played with code!");
     });

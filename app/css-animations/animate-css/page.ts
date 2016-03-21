@@ -12,5 +12,5 @@ export function pageLoaded(args: observable.EventData) {
 
 export function onAnimate(args: observable.EventData) {
     view.className = "";
-    view.className = "rubberBand";
+    view.className = "myRubberBand";
 }

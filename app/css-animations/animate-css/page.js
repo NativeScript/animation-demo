@@ -7,7 +7,7 @@ function pageLoaded(args) {
 exports.pageLoaded = pageLoaded;
 function onAnimate(args) {
     view.className = "";
-    view.className = "rubberBand";
+    view.className = "myRubberBand";
 }
 exports.onAnimate = onAnimate;
 //# sourceMappingURL=page.js.map

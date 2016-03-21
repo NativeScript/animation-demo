@@ -3,19 +3,21 @@ import pages = require("ui/page");
 import viewModule = require("ui/core/view");
 import animationModule = require("ui/animation");
 import cssjsonModule = require("~/css-animations/settings/cssjson");
+import segmentedBarModule = require("ui/segmented-bar");
+import sliderModule = require("ui/slider");
 
 let page: pages.Page;
 let view: viewModule.View;
-let fillBar: viewModule.SegmentedBar;
-let directionBar: viewModule.SegmentedBar;
+let fillBar: segmentedBarModule.SegmentedBar;
+let directionBar: segmentedBarModule.SegmentedBar;
 let model = new observable.Observable();
 
 function roundSliderValue(sliderId: string) {
-    let slider = page.getViewById<viewModule.Slider>(sliderId);
+    let slider = page.getViewById<sliderModule.Slider>(sliderId);
     slider.on("propertyChange", function (data: observable.EventData) { model.set(sliderId, Math.round(slider.value)); });
 }
 
-export function pageLoaded(args: observable.EventData) {
+ export function pageLoaded(args: observable.EventData) {
     model.set("duration", 1);
     model.set("delay", 0);
     model.set("iterations", 1);
@@ -23,8 +25,8 @@ export function pageLoaded(args: observable.EventData) {
     page = <pages.Page>args.object;
     page.bindingContext = model;
 
-    fillBar = page.getViewById<viewModule.SegmentedBar>("direction");
-    directionBar = page.getViewById<viewModule.SegmentedBar>("fill");
+    fillBar = page.getViewById<segmentedBarModule.SegmentedBar>("direction");
+    directionBar = page.getViewById<segmentedBarModule.SegmentedBar>("fill");
     view = page.getViewById<viewModule.View>("view");
 
     directionBar.selectedIndex = 1;
@@ -33,7 +35,7 @@ export function pageLoaded(args: observable.EventData) {
     roundSliderValue("duration");
     roundSliderValue("delay");
     roundSliderValue("iterations");
-}
+ }
 
 export function onAnimate(args: observable.EventData) {
 
