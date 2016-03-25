@@ -12,6 +12,7 @@
       <Button text="from-code" tap="onButtonTap"/>
       <Button text="settings" tap="onButtonTap"/>
       <Button text="visual-states" tap="onButtonTap"/>
+      <Button text="initial-animation" tap="onButtonTap"/>
     </StackLayout>
   </ScrollView>
 </Page>
