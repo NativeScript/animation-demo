@@ -4,11 +4,11 @@
 
 .button:highlighted {
     animation-name: highlight;
-    animation-duration: 1s;
-    animation-duration: forwards;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes highlight {
-    from { background-color: green; }
+    from { background-color: yellow; }
     to { background-color: red; }
 }
