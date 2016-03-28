@@ -1,0 +1,14 @@
+.button {
+    background-color: green;
+}
+
+.button:highlighted {
+    animation-name: highlight;
+    animation-duration: 1s;
+    animation-duration: forwards;
+}
+
+@keyframes highlight {
+    from { background-color: green; }
+    to { background-color: red; }
+}

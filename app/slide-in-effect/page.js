@@ -1,3 +1,4 @@
+"use strict";
 var imageModule = require("ui/image");
 var wrapLayout;
 function pageLoaded(args) {

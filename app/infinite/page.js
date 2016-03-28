@@ -1,3 +1,4 @@
+"use strict";
 var animationModule = require("ui/animation");
 var view;
 function pageLoaded(args) {

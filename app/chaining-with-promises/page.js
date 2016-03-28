@@ -1,3 +1,4 @@
+"use strict";
 var view;
 function pageLoaded(args) {
     var page = args.object;

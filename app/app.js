@@ -1,3 +1,4 @@
+"use strict";
 var application = require("application");
 var trace = require("trace");
 trace.enable();

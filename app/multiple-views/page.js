@@ -1,3 +1,4 @@
+"use strict";
 var animationModule = require("ui/animation");
 var view1;
 var view2;

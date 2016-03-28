@@ -1,0 +1,46 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <Page.actionBar>
+      <ActionBar title="Settings"/>
+  </Page.actionBar>
+  <ScrollView>
+     <StackLayout style="margin: 15;">
+        <Label text="Duration (in seconds):"/>
+        <DockLayout>
+            <Label dock="right" style="text-alignment: center" width="20" style="margin-left: 10" text="{{ duration }}"/>
+            <Slider id="duration" dock="left" minValue="0" maxValue="10"/>
+        </DockLayout>
+        <Label text="Delay (in seconds):"/>
+        <DockLayout>
+            <Label dock="right" style="text-alignment: center" width="20" style="margin-left: 10" text="{{ delay }}"/>
+            <Slider id="delay" dock="left" minValue="0" maxValue="10"/>
+        </DockLayout>
+        <Label text="Iterations count:"/>
+        <DockLayout>
+            <Label dock="right" style="text-alignment: center" width="20" style="margin-left: 10" text="{{ iterations }}"/>
+            <Slider id="iterations" dock="left" minValue="1" maxValue="10"/>
+        </DockLayout>
+        <DockLayout>
+            <SegmentedBar id="direction" width="200" dock="right" style="margin: 5">
+                <SegmentedBar.items>
+                    <SegmentedBarItem title="Normal"/>
+                    <SegmentedBarItem title="Reverse"/>
+                </SegmentedBar.items>
+            </SegmentedBar>
+            <Label text="Direction:" dock="left"/>
+        </DockLayout>
+        <DockLayout>
+            <SegmentedBar id="fill" width="200" dock="right" style="margin: 5">
+                <SegmentedBar.items>
+                    <SegmentedBarItem title="None"/>
+                    <SegmentedBarItem title="Forwards"/>
+                </SegmentedBar.items>
+            </SegmentedBar>
+            <Label text="Fill mode:" dock="left"/>
+        </DockLayout>
+        <Button text="Animate" tap="onAnimate" height="44" style="margin: 5"/>
+        <AbsoluteLayout width="300" height="100" clipToBounds="true" backgroundColor="LightGray">
+        <Image id="view" src="~/res/icon_100x100.png" width="50" height="50" left="0" top="25"/>
+        </AbsoluteLayout>
+    </StackLayout>
+  </ScrollView>
+</Page>
