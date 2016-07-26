@@ -39,8 +39,6 @@ function roundSliderValue(sliderId: string) {
 
 export function onAnimate(args: observable.EventData) {
 
-    page.removeCssSelectors("button");
-
     let json = { children: { ".button": { attributes: {
         "animation-name": "transformed",
         "animation-duration": model.get("duration"),
@@ -49,9 +47,9 @@ export function onAnimate(args: observable.EventData) {
         "animation-direction": fillBar.selectedIndex === 1 ? "reverse" : "normal",
         "animation-fill-mode": directionBar.selectedIndex === 1 ? "forwards" : "none"
     } } } };
-    let css = cssjsonModule.CSSJSON.toCSS(json);
 
-    page.addCss(css);
+    let css = cssjsonModule.CSSJSON.toCSS(json);
+    page.css = css;
 
     view.className = "";
     view.className = "button";

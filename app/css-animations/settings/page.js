@@ -27,7 +27,6 @@ function pageLoaded(args) {
 }
 exports.pageLoaded = pageLoaded;
 function onAnimate(args) {
-    page.removeCssSelectors("button");
     var json = { children: { ".button": { attributes: {
                     "animation-name": "transformed",
                     "animation-duration": model.get("duration"),
@@ -37,7 +36,7 @@ function onAnimate(args) {
                     "animation-fill-mode": directionBar.selectedIndex === 1 ? "forwards" : "none"
                 } } } };
     var css = cssjsonModule.CSSJSON.toCSS(json);
-    page.addCss(css);
+    page.css = css;
     view.className = "";
     view.className = "button";
 }
