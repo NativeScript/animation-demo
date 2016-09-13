@@ -27,10 +27,10 @@
 	"nativescript": {
 		"id": "org.nativescript.animationdemo",
 		"tns-android": {
-			"version": "2.1.1"
+			"version": "2.2.1"
 		},
 		"tns-ios": {
-			"version": "2.1.1"
+			"version": "2.3.0"
 		}
 	},
 	"devDependencies": {
@@ -38,6 +38,6 @@
 		"typescript": "^1.6.2"
 	},
 	"dependencies": {
-		"tns-core-modules": "2.1.0"
+		"tns-core-modules": "2.2.0"
 	}
 }
