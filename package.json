@@ -34,6 +34,7 @@
 		}
 	},
 	"devDependencies": {
+		"nativescript-dev-android-snapshot": "^0.*.*"
 		"nativescript-dev-typescript": "^0.3.0",
 		"typescript": "^1.6.2"
 	},
