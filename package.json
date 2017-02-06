@@ -1,43 +1,47 @@
 {
-	"name": "animation-demo",
-	"version": "1.0.0",
-	"description": "A sample app demonstrating the different animations that can be done with NativeScript",
-	"main": "app/package.json",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/NativeScript/animation-demo.git"
-	},
-	"keywords": [
-		"nativescript",
-		"telerik",
-		"sample",
-		"animation",
-		"tns",
-		"example"
-	],
-	"author": "Rossen Hristov",
-	"license": "BSD",
-	"bugs": {
-		"url": "https://github.com/NativeScript/animation-demo/issues"
-	},
-	"homepage": "https://github.com/NativeScript/animation-demo",
-	"nativescript": {
-		"id": "org.nativescript.animationdemo",
-		"tns-android": {
-			"version": "2.2.1"
-		},
-		"tns-ios": {
-			"version": "2.3.0"
-		}
-	},
-	"devDependencies": {
-		"nativescript-dev-typescript": "^0.3.0",
-		"typescript": "^1.6.2"
-	},
-	"dependencies": {
-		"tns-core-modules": "2.2.0"
-	}
+  "name": "animation-demo",
+  "version": "1.0.0",
+  "description": "A sample app demonstrating the different animations that can be done with NativeScript",
+  "main": "app/package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/animation-demo.git"
+  },
+  "keywords": [
+    "nativescript",
+    "telerik",
+    "sample",
+    "animation",
+    "tns",
+    "example"
+  ],
+  "author": "Rossen Hristov",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/NativeScript/animation-demo/issues"
+  },
+  "homepage": "https://github.com/NativeScript/animation-demo",
+  "nativescript": {
+    "id": "org.nativescript.animationdemo",
+    "tns-ios": {
+      "version": "2.5.0"
+    },
+    "tns-android": {
+      "version": "2.5.0"
+    }
+  },
+  "devDependencies": {
+    "babel-traverse": "6.22.1",
+    "babel-types": "6.22.0",
+    "babylon": "6.15.0",
+    "lazy": "1.0.11",
+    "nativescript-dev-typescript": "~0.3.7",
+    "typescript": "~2.1.5"
+  },
+  "dependencies": {
+    "tns-core-modules": "~2.5.0"
+  }
 }
