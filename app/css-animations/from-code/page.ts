@@ -2,6 +2,7 @@ import observable = require("data/observable");
 import pages = require("ui/page");
 import viewModule = require("ui/core/view");
 import keyframeAnimation = require("ui/animation/keyframe-animation");
+import { ValueSource } from "ui/core/dependency-observable";
 
 let view: viewModule.View;
 let animationInfo: keyframeAnimation.KeyframeAnimationInfo;
@@ -14,7 +15,7 @@ export function pageLoaded(args: observable.EventData) {
 }
 
 export function onAnimate(args: observable.EventData) {
-    let animation = keyframeAnimation.KeyframeAnimation.keyframeAnimationFromInfo(animationInfo);
+    let animation = keyframeAnimation.KeyframeAnimation.keyframeAnimationFromInfo(animationInfo, ValueSource.Css);
     animation.play(view).then(() => {
         console.log("Played with code!");
     });

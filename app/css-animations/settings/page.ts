@@ -2,7 +2,6 @@ import observable = require("data/observable");
 import pages = require("ui/page");
 import viewModule = require("ui/core/view");
 import animationModule = require("ui/animation");
-import cssjsonModule = require("~/css-animations/settings/cssjson");
 import segmentedBarModule = require("ui/segmented-bar");
 import sliderModule = require("ui/slider");
 
@@ -38,17 +37,15 @@ function roundSliderValue(sliderId: string) {
  }
 
 export function onAnimate(args: observable.EventData) {
+    let css = `.button {
+        animation-name: transformed;
+        animation-duration: ${model.get("duration")};
+        animation-delay: ${model.get("delay")};
+        animation-iteration-count: ${model.get("iterations")};
+        animation-direction: ${fillBar.selectedIndex === 1 ? "reverse" : "normal"};
+        animation-fill-mode: ${directionBar.selectedIndex === 1 ? "forwards" : "none"};
+    }`
 
-    let json = { children: { ".button": { attributes: {
-        "animation-name": "transformed",
-        "animation-duration": model.get("duration"),
-        "animation-delay": model.get("delay"),
-        "animation-iteration-count": model.get("iterations"),
-        "animation-direction": fillBar.selectedIndex === 1 ? "reverse" : "normal",
-        "animation-fill-mode": directionBar.selectedIndex === 1 ? "forwards" : "none"
-    } } } };
-
-    let css = cssjsonModule.CSSJSON.toCSS(json);
     page.css = css;
 
     view.className = "";
