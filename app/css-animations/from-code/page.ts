@@ -1,21 +1,21 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
-import keyframeAnimation = require("ui/animation/keyframe-animation");
-import { ValueSource } from "ui/core/dependency-observable";
+import { EventData } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+import { View } from "tns-core-modules/ui/core/view";
+import { KeyframeAnimation, KeyframeAnimationInfo } from "tns-core-modules/ui/animation/keyframe-animation";
+import { ValueSource } from "tns-core-modules/ui/core/dependency-observable";
 
-let view: viewModule.View;
-let animationInfo: keyframeAnimation.KeyframeAnimationInfo;
+let view: View;
+let animationInfo: KeyframeAnimationInfo;
 
-export function pageLoaded(args: observable.EventData) {
-    let page = <pages.Page>args.object;
-    view = page.getViewById<viewModule.View>("view");
+export function pageLoaded(args: EventData) {
+    let page = <Page>args.object;
+    view = page.getViewById<View>("view");
     animationInfo = page.getKeyframeAnimationWithName("bounce");
     animationInfo.duration = 2000;
 }
 
-export function onAnimate(args: observable.EventData) {
-    let animation = keyframeAnimation.KeyframeAnimation.keyframeAnimationFromInfo(animationInfo, ValueSource.Css);
+export function onAnimate(args: EventData) {
+    let animation = KeyframeAnimation.keyframeAnimationFromInfo(animationInfo);
     animation.play(view).then(() => {
         console.log("Played with code!");
     });

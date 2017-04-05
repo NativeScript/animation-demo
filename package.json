@@ -27,10 +27,10 @@
   "nativescript": {
     "id": "org.nativescript.animationdemo",
     "tns-ios": {
-      "version": "2.5.0"
+      "version": "3.0.0-rc.1"
     },
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.0.0-rc.1"
     }
   },
   "devDependencies": {
@@ -38,11 +38,11 @@
     "babel-types": "6.22.0",
     "babylon": "6.15.0",
     "lazy": "1.0.11",
-    "nativescript-dev-android-snapshot": "~0.0.6",
-    "nativescript-dev-typescript": "~0.3.7",
-    "typescript": "~2.1.5"
+    "nativescript-dev-android-snapshot": "~0.0.8",
+    "nativescript-dev-typescript": "~0.4.2",
+    "typescript": "~2.2.2"
   },
   "dependencies": {
-    "tns-core-modules": "~2.5.0"
+    "tns-core-modules": "rc"
   }
 }
