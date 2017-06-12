@@ -1,53 +1,98 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
-import animationModule = require("ui/animation");
-import segmentedBarModule = require("ui/segmented-bar");
-import sliderModule = require("ui/slider");
+import { Observable, EventData } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+//import { ViewBase } from "tns-core-modules/ui/core/view";
+// import { Animation } from "tns-core-modules/ui/animation";
+// import { SegmentedBar } from "tns-core-modules/ui/segmented-bar";
+// import { Slider } from "tns-core-modules/ui/slider";
+import { Image } from "tns-core-modules/ui/image";
 
-let page: pages.Page;
-let view: viewModule.View;
-let fillBar: segmentedBarModule.SegmentedBar;
-let directionBar: segmentedBarModule.SegmentedBar;
-let model = new observable.Observable();
-
-function roundSliderValue(sliderId: string) {
-    let slider = page.getViewById<sliderModule.Slider>(sliderId);
-    slider.on("propertyChange", function (data: observable.EventData) { model.set(sliderId, Math.round(slider.value)); });
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    page.bindingContext = new SettingsViewModel();
 }
 
- export function pageLoaded(args: observable.EventData) {
-    model.set("duration", 1);
-    model.set("delay", 0);
-    model.set("iterations", 1);
+export class SettingsViewModel extends Observable {
 
-    page = <pages.Page>args.object;
-    page.bindingContext = model;
+    private _duration: number = 1;
+    private _delay: number = 0;
+    private _iterations: number = 1;
+    private _selectedDirectionIndex: number = 0;
+    private _selectedFillIndex:number =0;
 
-    fillBar = page.getViewById<segmentedBarModule.SegmentedBar>("direction");
-    directionBar = page.getViewById<segmentedBarModule.SegmentedBar>("fill");
-    view = page.getViewById<viewModule.View>("view");
+    constructor() {
+        super();
+    }
 
-    directionBar.selectedIndex = 1;
-    fillBar.selectedIndex = 0;
+    get iterations() {
+        return this._iterations;
+    }
 
-    roundSliderValue("duration");
-    roundSliderValue("delay");
-    roundSliderValue("iterations");
- }
+    set iterations(value: number) {
+        if (value != this._iterations) {
+            this._iterations = this.roundSliderValue(value);
+        }
+    }
 
-export function onAnimate(args: observable.EventData) {
-    let css = `.button {
-        animation-name: transformed;
-        animation-duration: ${model.get("duration")};
-        animation-delay: ${model.get("delay")};
-        animation-iteration-count: ${model.get("iterations")};
-        animation-direction: ${fillBar.selectedIndex === 1 ? "reverse" : "normal"};
-        animation-fill-mode: ${directionBar.selectedIndex === 1 ? "forwards" : "none"};
-    }`
+    get delay() {
+        return this._delay;
+    }
 
-    page.css = css;
+    set delay(value: number) {
+        if (value !== this._delay) {
+            this._delay = this.roundSliderValue(value);
+        }
+    }
 
-    view.className = "";
-    view.className = "button";
+    get duration() {
+        return this._duration;
+    }
+
+    set duration(value: number) {
+        if (this._duration != value) {
+            this._duration = this.roundSliderValue(value);
+        }
+    }
+
+    get selectedDirectionIndex() {
+        return this._selectedDirectionIndex;
+    }
+
+    set selectedDirectionIndex(value: number) {
+        if (value != this._selectedDirectionIndex) {
+            this._selectedDirectionIndex = value;
+        }
+    }
+
+        get selectedFillIndex() {
+        return this._selectedFillIndex;
+    }
+
+    set selectedFillIndex(value: number) {
+        if (value != this._selectedDirectionIndex) {
+            this._selectedFillIndex = value;
+        }
+    }
+
+    public onAnimate(args: EventData) {
+        const button = <Page>args.object;
+
+        let css = `
+        #img {
+            animation-name: transformed;
+            animation-duration: ${this.duration};
+            animation-delay: ${this.delay};
+            animation-iteration-count: ${this.iterations};
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-direction: ${this.selectedFillIndex === 1 ? "reverse" : "normal"};
+            animation-fill-mode: ${this.selectedDirectionIndex === 1 ? "forwards" : "none"};
+        }`;
+
+        button.page.css = css;
+    }
+
+
+    private roundSliderValue(value: number) {
+        return Math.round(value);
+    }
 }
