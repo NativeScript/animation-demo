@@ -1,10 +1,7 @@
 import { Observable, EventData } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
-//import { ViewBase } from "tns-core-modules/ui/core/view";
-// import { Animation } from "tns-core-modules/ui/animation";
-// import { SegmentedBar } from "tns-core-modules/ui/segmented-bar";
-// import { Slider } from "tns-core-modules/ui/slider";
 import { Image } from "tns-core-modules/ui/image";
+import { Button } from "tns-core-modules/ui/button";
 
 export function pageLoaded(args: EventData) {
     const page = <Page>args.object;
@@ -17,7 +14,7 @@ export class SettingsViewModel extends Observable {
     private _delay: number = 0;
     private _iterations: number = 1;
     private _selectedDirectionIndex: number = 0;
-    private _selectedFillIndex:number =0;
+    private _selectedFillIndex: number = 0;
 
     constructor() {
         super();
@@ -63,7 +60,7 @@ export class SettingsViewModel extends Observable {
         }
     }
 
-        get selectedFillIndex() {
+    get selectedFillIndex() {
         return this._selectedFillIndex;
     }
 
@@ -74,23 +71,23 @@ export class SettingsViewModel extends Observable {
     }
 
     public onAnimate(args: EventData) {
-        const button = <Page>args.object;
+        const button = <Button>args.object;
 
         let css = `
+        Label {
+            font-size: 8;
+        }
         #img {
             animation-name: transformed;
             animation-duration: ${this.duration};
             animation-delay: ${this.delay};
             animation-iteration-count: ${this.iterations};
-            animation-direction: normal;
-            animation-fill-mode: forwards;
-            animation-direction: ${this.selectedFillIndex === 1 ? "reverse" : "normal"};
-            animation-fill-mode: ${this.selectedDirectionIndex === 1 ? "forwards" : "none"};
+            animation-direction:${this.selectedDirectionIndex === 1 ? "reverse" : "normal"};
+            animation-fill-mode: ${this.selectedFillIndex === 1 ? "forwards" : "none"};
         }`;
 
         button.page.css = css;
     }
-
 
     private roundSliderValue(value: number) {
         return Math.round(value);

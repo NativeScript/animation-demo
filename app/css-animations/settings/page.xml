@@ -1,4 +1,5 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page 
+	xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
 	<Page.actionBar>
 		<ActionBar title="Settings" />
 	</Page.actionBar>
@@ -20,7 +21,7 @@
 				<Label col="1" text="{{ iterations }}" />
 			</GridLayout>
 			<GridLayout rows="auto,auto">
-				<Label text="Direction:" dock="left" />
+				<Label text="Direction:"/>
 				<SegmentedBar row="1" id="direction" style="margin: 5" selectedIndex="{{ selectedDirectionIndex }}">
 					<SegmentedBar.items>
 						<SegmentedBarItem title="Normal" />
@@ -29,7 +30,7 @@
 				</SegmentedBar>
 			</GridLayout>
 			<GridLayout rows="auto,auto">
-				<Label text="Fill mode:" dock="left" />
+				<Label text="Fill mode:" />
 				<SegmentedBar row="1" id="fill" style="margin: 5" selectedIndex="{{ selectedFillIndex }}">
 					<SegmentedBar.items>
 						<SegmentedBarItem title="None" />
@@ -37,7 +38,7 @@
 					</SegmentedBar.items>
 				</SegmentedBar>
 			</GridLayout>
-			<Button text="Animate" tap="{{ onAnimate }}" />
+			<Button text="Animate" tap="{{ onAnimate }}" height="40"/>
 			<AbsoluteLayout height="100" clipToBounds="true" backgroundColor="LightGray" margin="5">
 				<Image id="img" src="~/res/icon_100x100.png" width="50" height="50" left="0" top="25" />
 			</AbsoluteLayout>

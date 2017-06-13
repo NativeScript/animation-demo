@@ -3,6 +3,10 @@
         transform: none;
     }
     to {
-        transform: translate(250, 0) scale(1.5, 1.5) rotate(45);
+        transform: translate(150, 0) scale(1.5, 1.5) rotate(45);
     }
+}
+
+Label {
+    font-size: 8;
 }
