@@ -27,21 +27,21 @@
   "nativescript": {
     "id": "org.nativescript.animationdemo",
     "tns-ios": {
-      "version": "3.0.0"
+      "version": "next"
     },
     "tns-android": {
-      "version": "3.0.0"
+      "version": "next"
     }
+  },
+  "dependencies": {
+    "tns-core-modules": "next"
   },
   "devDependencies": {
     "babel-traverse": "6.22.1",
     "babel-types": "6.22.0",
     "babylon": "6.15.0",
     "lazy": "1.0.11",
-    "nativescript-dev-typescript": "~0.4.2",
+    "nativescript-dev-typescript": "~0.5.0",
     "typescript": "~2.3.1"
-  },
-  "dependencies": {
-    "tns-core-modules": "next"
   }
 }
