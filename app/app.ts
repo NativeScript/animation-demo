@@ -1,5 +1,5 @@
-import application = require("application");
-import trace = require("trace");
+import * as application from "application";
+import * as trace from "trace";
 
 trace.enable();
 trace.setCategories(trace.categories.concat(trace.categories.Animation));

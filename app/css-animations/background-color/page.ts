@@ -1,8 +1,8 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
-import animationModule = require("ui/animation");
-import colorModule = require("color");
+import * as observable from "data/observable";
+import * as pages from "ui/page";
+import * as viewModule from "ui/core/view";
+import * as animationModule from "ui/animation";
+import * as colorModule from "color";
 
 let view: viewModule.View;
 

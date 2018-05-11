@@ -2,7 +2,7 @@
 	"name": "animation-demo",
 	"main": "app.js",
 	"jsoptions": "--expose_gc",
-	"version": "1.3.0",
+	"version": "2.0.0",
 	"author": "Rossen Hristov",
 	"description": "A sample app demonstrating the different animations that can be done with NativeScript",
 	"license": "BSD",

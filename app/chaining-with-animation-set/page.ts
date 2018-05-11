@@ -1,7 +1,7 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
-import animationModule = require("ui/animation");
+import * as observable from "data/observable";
+import * as pages from "ui/page";
+import * as viewModule from "ui/core/view";
+import * as animationModule from "ui/animation";
 
 var view1: viewModule.View;
 var view2: viewModule.View;

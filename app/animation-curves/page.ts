@@ -1,7 +1,7 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
-import enums = require("ui/enums");
+import * as observable from "data/observable";
+import * as pages from "ui/page";
+import * as viewModule from "ui/core/view";
+import * as enums from "ui/enums";
 
 var view: viewModule.View;
 
