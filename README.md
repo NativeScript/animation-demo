@@ -17,12 +17,4 @@ Use this application to find-out how to implement common animation scenarios wit
 
 4. Run the project.
 
-    `tns run ios|android [--emulator]`
-
-    The `--emulator` keyword instructs the CLI to load the iOS simulator or an android emulator depending on the platform you want.
-
-For convenience you can use the `run.bat`/`run.sh` scripts on a \*NIX/windows environment respectively. The `run.sh` script starts the sample in iOS when run on a Mac and Android on Linux/Windows. The `run.bat` script runs the sample on an Android emulator under Windows.
-
-For \*NIX systems the following script runs the sample directly:
-
-`curl https://raw.githubusercontent.com/NativeScript/animation-demo/master/run.sh | bash`
+    `tns run ios|android`

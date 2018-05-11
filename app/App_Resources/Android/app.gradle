@@ -8,14 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.animationdemo" 
-    
-    //override supported platforms
-    // ndk {
-    //       abiFilters.clear()
-    //   		abiFilters "armeabi-v7a"
- 		// }
-  
+    applicationId = "org.nativescript.animationdemo"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  

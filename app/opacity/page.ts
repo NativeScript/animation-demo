@@ -1,6 +1,6 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
+import * as observable from "data/observable";
+import * as pages from "ui/page";
+import * as viewModule from "ui/core/view";
 
 var view: viewModule.View;
 

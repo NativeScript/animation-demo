@@ -1,6 +1,6 @@
-import observable = require("data/observable");
-import frame = require("ui/frame");
-import button = require("ui/button");
+import * as observable from "data/observable";
+import * as frame from "ui/frame";
+import * as button from "ui/button";
 
 export function pageLoaded(args) {
     var page = args.object;

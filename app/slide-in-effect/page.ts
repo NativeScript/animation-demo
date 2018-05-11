@@ -1,10 +1,10 @@
-import observable = require("data/observable");
-import pages = require("ui/page");
-import viewModule = require("ui/core/view");
-import animationModule = require("ui/animation");
-import color = require("color");
-import layoutModule = require("ui/layouts/layout");
-import imageModule = require("ui/image");
+import * as observable from "data/observable";
+import * as pages from "ui/page";
+import * as viewModule from "ui/core/view";
+import * as animationModule from "ui/animation";
+import * as color from "color";
+import * as layoutModule from "ui/layouts/layout";
+import * as imageModule from "ui/image";
 
 var wrapLayout: layoutModule.Layout;
 
