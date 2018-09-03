@@ -1,16 +1,15 @@
-import * as observable from "data/observable";
-import * as pages from "ui/page";
-import * as viewModule from "ui/core/view";
-import * as animationModule from "ui/animation";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { View } from "ui/core/view";
 
-var view: viewModule.View;
+let view: View;
 
-export function pageLoaded(args: observable.EventData) {
-    var page = <pages.Page>args.object;
-    view = page.getViewById<viewModule.View>("view");
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    view = page.getViewById<View>("view");
 }
 
-export function onAnimate(args: observable.EventData) {
+export function onAnimate() {
   view.animate({ opacity: 0 })
       .then(() => view.animate({ opacity: 1 }))
       .then(() => view.animate({ translate: { x: 100, y: 100 } }))
@@ -27,7 +26,7 @@ export function onAnimate(args: observable.EventData) {
     });
 }
 
-export function onReset(args: observable.EventData) {
+export function onReset() {
     view.translateX = 0;
     view.translateY = 0;
     view.scaleX = 1;

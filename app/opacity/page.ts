@@ -1,21 +1,21 @@
-import * as observable from "data/observable";
-import * as pages from "ui/page";
-import * as viewModule from "ui/core/view";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { View } from "ui/core/view";
 
-var view: viewModule.View;
+let view: View;
 
-export function pageLoaded(args: observable.EventData) {
-    var page = <pages.Page>args.object;
-    view = page.getViewById<viewModule.View>("view");
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    view = page.getViewById<View>("view");
 }
 
-export function onAnimate(args: observable.EventData) {
+export function onAnimate() {
     view.animate({
         opacity: 0,
         duration: 3000
     });
 }
 
-export function onReset(args: observable.EventData) {
+export function onReset() {
     view.opacity = 1.0;
 }

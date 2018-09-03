@@ -1,29 +1,29 @@
-import * as observable from "data/observable";
-import * as pages from "ui/page";
-import * as viewModule from "ui/core/view";
-import * as animationModule from "ui/animation";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { View } from "ui/core/view";
+import { Animation, AnimationDefinition } from "ui/animation";
 
-var view1: viewModule.View;
-var view2: viewModule.View;
-var view3: viewModule.View;
-var view4: viewModule.View;
+let view1: View;
+let view2: View;
+let view3: View;
+let view4: View;
 
-export function pageLoaded(args: observable.EventData) {
-    var page = <pages.Page>args.object;
-    view1 = page.getViewById<viewModule.View>("view1");
-    view2 = page.getViewById<viewModule.View>("view2");
-    view3 = page.getViewById<viewModule.View>("view3");
-    view4 = page.getViewById<viewModule.View>("view4");
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    view1 = page.getViewById<View>("view1");
+    view2 = page.getViewById<View>("view2");
+    view3 = page.getViewById<View>("view3");
+    view4 = page.getViewById<View>("view4");
 }
 
-export function onAnimate(args: observable.EventData) {
-  var definitions = new Array<animationModule.AnimationDefinition>();
+export function onAnimate() {
+  const definitions = new Array<AnimationDefinition>();
   definitions.push({target: view1, translate: {x: 200, y: 0}, duration: 3000 });
   definitions.push({target: view2, translate: {x: 0, y: 200}, duration: 3000 });
   definitions.push({target: view3, translate: {x: -200, y: 0}, duration: 3000 });
   definitions.push({target: view4, translate: {x: 0, y: -200}, duration: 3000 });
-  var playSequentially = true;
-  var animationSet = new animationModule.Animation(definitions, playSequentially);
+  const playSequentially = true;
+  const animationSet = new Animation(definitions, playSequentially);
 
   animationSet.play().then(() => {
       console.log("Animation finished");
@@ -33,7 +33,7 @@ export function onAnimate(args: observable.EventData) {
   });
 }
 
-export function onReset(args: observable.EventData) {
+export function onReset() {
     view1.translateX = 0;
     view1.translateY = 0;
     view2.translateX = 0;
