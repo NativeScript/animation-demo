@@ -1,21 +1,20 @@
-import * as observable from "data/observable";
-import * as pages from "ui/page";
-import * as viewModule from "ui/core/view";
-import * as animationModule from "ui/animation";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { View } from "ui/core/view";
+import { Animation } from "ui/animation";
 
-var view: viewModule.View;
-
+let view: View;
 
 declare const CAMediaTimingFunction:any
 
-export function pageLoaded(args: observable.EventData) {
-    var page = <pages.Page>args.object;
-    view = page.getViewById<viewModule.View>("view");
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    view = page.getViewById<View>("view");
 }
 
-var animationSet: animationModule.Animation;
-export function onAnimate(args: observable.EventData) {
-    animationSet = new animationModule.Animation([{
+let animationSet: Animation;
+export function onAnimate() {
+    animationSet = new Animation([{
         target: view,
         rotate: 360,
         duration: 3000,
@@ -28,7 +27,7 @@ export function onAnimate(args: observable.EventData) {
     // Call animationSet.cancel() to stop it;
 }
 
-export function onReset(args: observable.EventData) {
+export function onReset() {
     animationSet.cancel();
     view.rotate = 0;
 }

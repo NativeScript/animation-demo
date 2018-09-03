@@ -1,14 +1,15 @@
-import * as observable from "data/observable";
-import * as frame from "ui/frame";
-import * as button from "ui/button";
+import { EventData } from "data/observable";
+import { topmost } from "ui/frame";
+import { Page } from "ui/page";
+import { Button } from "ui/button";
 
-export function pageLoaded(args) {
-    var page = args.object;
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
     page.actionBarHidden = false;
 }
 
-export function onButtonTap(args: observable.EventData) {
-    var clickedButton = <button.Button>args.object;
-    var destination = "./" + clickedButton.text + "/page";
-    frame.topmost().navigate(destination);
+export function onButtonTap(args: EventData) {
+    const clickedButton = <Button>args.object;
+    const destination = "./" + clickedButton.text + "/page";
+    topmost().navigate(destination);
 }

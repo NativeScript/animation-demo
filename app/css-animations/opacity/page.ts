@@ -1,19 +1,18 @@
-import * as observable from "data/observable";
-import * as pages from "ui/page";
-import * as viewModule from "ui/core/view";
-import * as animationModule from "ui/animation";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { View } from "ui/core/view";
 
-let view: viewModule.View;
+let view: View;
 
-export function pageLoaded(args: observable.EventData) {
-    let page = <pages.Page>args.object;
-    view = page.getViewById<viewModule.View>("view");
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    view = page.getViewById<View>("view");
 }
 
-export function onAnimate(args: observable.EventData) {
+export function onAnimate(args: EventData) {
     view.className = "transparent";
 }
 
-export function onReset(args: observable.EventData) {
+export function onReset() {
     view.className = "opaque";
 }

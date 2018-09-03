@@ -1,60 +1,60 @@
-import * as observable from "data/observable";
-import * as pages from "ui/page";
-import * as viewModule from "ui/core/view";
-import * as enums from "ui/enums";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { View } from "ui/core/view";
+import { AnimationCurve } from "ui/enums";
 
-var view: viewModule.View;
+let view: View;
 
-export function pageLoaded(args: observable.EventData) {
-    var page = <pages.Page>args.object;
-    view = page.getViewById<viewModule.View>("view");
+export function pageLoaded(args: EventData) {
+    const page = <Page>args.object;
+    view = page.getViewById<View>("view");
 }
 
-export function onAnimateLinear(args: observable.EventData) {
+export function onAnimateLinear() {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: enums.AnimationCurve.linear
+        curve: AnimationCurve.linear
     });
 }
 
-export function onAnimateEaseIn(args: observable.EventData) {
+export function onAnimateEaseIn() {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: enums.AnimationCurve.easeIn
+        curve: AnimationCurve.easeIn
     });}
 
-export function onAnimateEaseOut(args: observable.EventData) {
+export function onAnimateEaseOut() {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: enums.AnimationCurve.easeOut
+        curve: AnimationCurve.easeOut
     });}
 
-export function onAnimateEaseInEaseOut(args: observable.EventData) {
+export function onAnimateEaseInEaseOut() {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: enums.AnimationCurve.easeInOut
+        curve: AnimationCurve.easeInOut
     });}
 
-export function onAnimateSpring(args: observable.EventData) {
+export function onAnimateSpring() {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: enums.AnimationCurve.spring
+        curve: AnimationCurve.spring
     });}
 
-export function onAnimateCustom(args: observable.EventData) {
+export function onAnimateCustom() {
     view.animate({
         translate: { x: 0, y: 100},
         duration: 1000,
-        curve: enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
+        curve: AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
 }
 
-export function onReset(args: observable.EventData) {
+export function onReset() {
     view.translateX = 0;
     view.translateY = 0;
 }
