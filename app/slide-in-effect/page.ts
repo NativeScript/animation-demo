@@ -26,7 +26,7 @@ export function onAddItem() {
 }
 
 export function onClear() {
-    const i = wrapLayout.getChildrenCount() - 1;
+    let i = wrapLayout.getChildrenCount() - 1;
     while (i >= 0) {
         wrapLayout.removeChild(wrapLayout.getChildAt(i--));
     }
