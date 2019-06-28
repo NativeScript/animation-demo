@@ -3,4 +3,5 @@ import * as trace from "trace";
 
 trace.enable();
 trace.setCategories(trace.categories.concat(trace.categories.Animation));
-application.start("main-page");
+
+application.run({ moduleName: "app-root" });
