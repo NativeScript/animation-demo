@@ -1,4 +1,5 @@
 {
+	"cssParser": "css-tree",
 	"name": "animation-demo",
 	"main": "app.js",
 	"jsoptions": "--expose_gc",
