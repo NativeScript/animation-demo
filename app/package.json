@@ -12,7 +12,7 @@
 		"nativescript",
 		"{N}",
 		"tns",
-        "animation"
+		"animation"
 	],
 	"repository": {
 		"type": "git",
@@ -21,5 +21,8 @@
 	"bugs": {
 		"url": "https://github.com/NativeScript/animation-demo/issues"
 	},
-	"homepage": "https://github.com/NativeScript/animation-demo"
+	"homepage": "https://github.com/NativeScript/animation-demo",
+	"android": {
+		"markingMode": "none"
+	}
 }
